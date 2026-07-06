@@ -1,28 +1,28 @@
 
 ---
 
-# 👁️ Drishti Vision
+# Drishti Vision
 
 **Drishti** (Sanskrit for "Vision" or "Sight") is an AI-powered assistive mobile application built with Flutter. It is designed to empower visually impaired individuals through real-time object detection and bilingual voice feedback, while providing peace of mind to their loved ones through a secure caregiver dashboard.
 
-## 🚀 Key Features
+## Key Features
 
 Drishti utilizes a unique **Dual-Role Architecture**, allowing users to sign up as either a Vision User or a Caregiver, with entirely different experiences tailored to their needs.
 
-### 🧑‍🦯 For Vision Users
+### For Vision Users
 
 * **Real-Time Object Detection:** Runs a custom YOLO (You Only Look Once) model completely on-device. No internet connection is required for inference, ensuring zero latency and maximum privacy.
 * **Bilingual Voice Feedback:** Supports both English and Bengali (বাংলা). Uses a custom chunking algorithm connected to Google Translate TTS for high-quality native Bengali pronunciation, alongside standard on-device TTS.
 * **Smart Journaling:** Automatically logs detected objects and session durations. Uses a 30-second deduplication window to save battery life and reduce cloud read/writes.
 * **High-Contrast UI:** Designed specifically for low-vision accessibility with large touch targets, pulsing indicators, and full Dark/Light mode support.
 
-### 🫂 For Caregivers
+### For Caregivers
 
 * **Secure Linking:** Connect with a Vision User using a secure, dynamically generated 4-character code (e.g., `DRISHTI-A1B2`).
 * **Remote Monitoring Dashboard:** View the Vision User's daily activity, total sessions, and most frequently encountered objects.
 * **Algorithmic Empathy:** Instead of sterile data tables, the app generates warm, natural-language daily summaries (e.g., *"John had an active day today. Chairs and cups were the most familiar sights."*).
 
-## 🛠️ Tech Stack & Architecture
+## Tech Stack & Architecture
 
 * **Frontend:** Flutter & Dart
 * **Backend:** Firebase (Auth, Firestore Database, Storage)
@@ -39,7 +39,7 @@ To prevent the UI from freezing during matrix math, Drishti processes the camera
 4. Custom Non-Max Suppression (NMS) filters overlapping bounding boxes.
 5. The result is shipped back to the main thread for UI rendering at 60 FPS.
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 drishti_app/
@@ -79,7 +79,7 @@ drishti_app/
 └── README.md
 ```
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -118,13 +118,9 @@ flutter run
 
 
 
-## 🔒 Security Note
+## Security Note
 
 If deploying this to production, ensure that your Firebase API keys in the Google Cloud Console are heavily restricted to your specific Android SHA-1 fingerprint and iOS Bundle ID to prevent unauthorized database access and usage limits.
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
 
 ---
 
